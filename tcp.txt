@@ -1,0 +1,16 @@
+TCP (SOCK_STREAM)
+
+- Stands for Transmission Control Protocol
+- Provides reliable, ordered and error-checked delivery of a stream of octets (AKA bytes) between hosts communicating via an IP network
+- Fundamental to the World Wide Web, email, file transfer etc
+- SSL/TLS runs on top of TCP often
+
+- Connection-orientated (a network communication mode where a semi-permanent or full session is established before any useful data can be transferred, and a stream of octet data is received in the same order it was sent)
+- Is more reliable at the cost of latency if retransmission (essentially identical to ARQ) is used
+- Employs network congestion avoidance. This is limiting the total number of unacknowledged packets that may be in transit end-to-end, and as long as non-duplicate ACK packets are received, the congestion window (a factor that determines the number of bytes that can be sent out at any time) is increased by one MSS (maximum segment size) every round-trip time (the length of time it takes for a signal to be sent plus the length of time it takes for an acknowledgement of that signal to be received)
+
+- There are multiple vulnerabilities to TCP including denial of service, connection hijacking, TCP veto and reset attack
+- TCP traffic can be intercepted and logged with a packet sniffer
+
+- TCP accepts data from a data stream, divides it into chunks, and adds a TCP header creating a TCP segment. This is then encapsulated into an Internet Protocol datagram and exchanged with peers
+- A TCP segment consists of a segment header and a data section. The segment header contains 10 mandatory fields and an optional extension field (Options, only used if data offset > 5, padded at the end with "0" bytes if necessary). The data section follows the header and is the payload data carried for the application. The length of the data section is not specified in the segment header, it can be calculated by subtracting the combined length of the segment header and IP header from the total IP datagram length specified in the IP header
