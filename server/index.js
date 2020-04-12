@@ -1,6 +1,14 @@
 const NET = require('net');
+const NoIPError = 'An IP address for broadcasting is required.';
 
-const HOST = 'localhost';
+let HOST;
+if (process.argv[2] != null) {
+    HOST = process.argv[2];
+}
+else {
+    throw NoIPError;
+}
+
 const PORT = 2876;
 
 NET.createServer(function(sock) {
