@@ -1,6 +1,6 @@
 const NET = require('net');
 
-const HOST = '192.168.193.45';
+const HOST = 'localhost';
 const PORT = 2876;
 
 NET.createServer(function(sock) {
