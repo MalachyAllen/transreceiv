@@ -15,3 +15,6 @@ Well, it goes like this:
 * The packet is sent using the transmitter
 * The recipient of the packet will receive the data packet via the receiver
 * The readable data is output to the recipient
+
+### Anything else I should know?
+Nothing much, other than the fact that transreceiv is licensed under the MIT License, which can be found at LICENSE.
