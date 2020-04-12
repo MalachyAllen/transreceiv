@@ -1,4 +1,4 @@
-TCP (SOCK_STREAM)
+TCP (SOCK_STREAM) (disregard most of this)
 
 - Stands for Transmission Control Protocol
 - Provides reliable, ordered and error-checked delivery of a stream of octets (AKA bytes) between hosts communicating via an IP network
