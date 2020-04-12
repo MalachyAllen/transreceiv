@@ -1,6 +1,7 @@
 const NET = require('net');
+const PROCESS = require('process');
 
-const HOST = '127.0.0.1';
+const HOST = process.argv[2];
 const PORT = 2876;
 
 const CLIENT = new NET.Socket();
