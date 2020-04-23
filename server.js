@@ -18,7 +18,7 @@ else {
 }
 
 NET.createServer(function(sock) {
-    console.log('SERVER CREATED ON: ' + sock.remoteAddress + ';' + sock.remotePort);
+    console.log('CONNECTION FROM: ' + sock.remoteAddress + ':' + sock.remotePort);
     sock.on('data', function(data) {
         console.log('DATA RECEIVED FROM: ' + sock.remoteAddress + ': ' + data);
         sock.write('DATA CONTENT: "' + data + '"');

@@ -18,6 +18,14 @@ let host = RLINPUT.question('IP to connect to: ', (host) => {
 
     if (NET.isIP(host) != 0 || host == 'localhost') {
         console.log('IP address correct. IP is ' + host);
+        const CLIENT = new NET.Socket();
+        CLIENT.connect(PORT, host, function() {
+            console.log('CONNECTED TO: ' + host + ':' + PORT);
+        });
+        CLIENT.on('close', function() {
+            CLIENT.destroy();
+            console.log('Connection closed.');
+        });
     }
     else {
         throw InvalidIPError;
@@ -25,13 +33,3 @@ let host = RLINPUT.question('IP to connect to: ', (host) => {
 
     RLINPUT.close();
 });
-
-// Help needed here, see issue #2.
-/*const CLIENT = new NET.Socket();
-CLIENT.connect(PORT, host, function() {
-    console.log('CONNECTED TO: ' + host + ':' + PORT);
-});
-CLIENT.on('close', function() {
-    CLIENT.destroy();
-    console.log('Connection closed.');
-});*/
