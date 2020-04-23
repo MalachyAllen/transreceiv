@@ -1,10 +1,10 @@
 # transreceiv
 
 ### What is transreceiv?
-Transreceiv is a data packet transmitter and receiver created in JavaScript using NodeJS.
+transreceiv is a data packet transmitter/receiver backend created in JavaScript using NodeJS.
 
 ### Sounds cool, what can I do with it?
-You should be able to use transreceiv as either a standalone tool (although it pretty much won't be able to do anything of any significance on its own) or you can implement it into your JS frontend/backend.
+You should be able to use transreceiv as either a standalone tool (although it pretty much won't be able to do anything of any significance on its own) or you can implement it into your JS frontend.
 
 ### Why did you make transreceiv?
 I made transreceiv as a challenge after I learned the basics of JavaScript. The goal after this is to further develop transreceiv and implement it into my own chat application.
@@ -16,5 +16,10 @@ Well, it goes like this:
 * The recipient of the packet will receive the data packet via the receiver
 * The readable data is output to the recipient
 
-### Anything else I should know?
-Nothing much, other than the fact that transreceiv is licensed under the MIT License, which can be found at LICENSE.
+### Will there be graphical clients instead of the included command line one?
+Yes! Three clients created by me will be made: [Liquid](https://github.com/SamFujisaki/liquid), [Supernova](https://github.com/SamFujisaki/supernova) and [Citrus](https://github.com/SamFujisaki/citrus), however I assure you that there is no consequences for using a custom client. In fact, I suggest you make your own client instead of using my ones!
+
+Clients are made using the [Electron framework](https://electronjs.org) and need to include the transreceiv folder in the root of your Electron project. Although the ability to create your own clients is a nice thing to have, I must warn you that I will **not** maintain any clients other than Liquid, Supernova and Citrus. Security of the third-party clients falls down to you, other programmers and more importantly the original developer of the client.
+
+### License
+transreceiv is licensed under the MIT License, which can be found [here](https://opensource.org/licenses/mit) or at the LICENSE file.
