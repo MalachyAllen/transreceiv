@@ -22,14 +22,19 @@ RLINPUT.question('IP to connect to: ', (host) => {
         console.log('IP address correct. IP is ' + host);
         const CLIENT = new NET.Socket();
         CLIENT.connect(PORT, host, function() {
-            console.log('CONNECTED TO: ' + host + ':' + PORT);
+            console.log('CONNECTING TO: ' + host + ':' + PORT + '...');
+        });
+        CLIENT.on('connect', function() {
+            console.log('CONNECTION ESTABLISHED AT: ' + host + ':' + PORT);
+        });
+        CLIENT.on('ready', function() {
             RLINPUT.question('Enter the message you want to send: ', (data) => {
                 if (data == null) {
                     throw NoMessageContentError;
                 }
                 else {
-                        console.log('SENDING DATA: ' + data);
-                        CLIENT.write(data);
+                    console.log('SENDING DATA: ' + data);
+                    CLIENT.write(data);
                 }
             });
         });
