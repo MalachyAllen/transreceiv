@@ -59,11 +59,13 @@ function UNTILEVENT(emitter, event) {
 	await UNTILEVENT(CLIENT, 'ready');
 
 	try {
-		const data = await RLQUESTION(RLINPUT, 'Enter the message you want to send: ');
-		if (data == null) {
-			throw NoMessageContentError;
-		} else {
-			CLIENT.write(data, 'utf-8');
+		while(true) {
+			const data = await RLQUESTION(RLINPUT, 'Enter the message you want to send: ');
+			if (data == null) {
+				console.log('No message content provided -> no message sent');
+			} else {
+				CLIENT.write(data, 'utf-8');
+			}
 		}
 	} catch(e) {
 		console.log(e === RLInputClosedError ? '<close signal>' : '');
