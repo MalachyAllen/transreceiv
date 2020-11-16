@@ -17,9 +17,9 @@ Well, it goes like this:
 * The readable data is output to the recipient
 
 ### Will there be graphical clients instead of the included command line one?
-Yes! Three clients created by me will be made: [Liquid](https://github.com/SamFujisaki/liquid), [Supernova](https://github.com/SamFujisaki/supernova) and [Citrus](https://github.com/SamFujisaki/citrus), however I assure you that there is no consequences for using a custom client. In fact, I suggest you make your own client instead of using my ones!
+Yes! A client created by me will be made: [Supernova](https://github.com/SamFujisaki/supernova), however I assure you that there is no consequences for using a custom client. In fact, I suggest you make your own client instead of using my one!
 
-Clients are made using the [Electron framework](https://electronjs.org) and need to include the transreceiv folder in the root of your Electron project. Although the ability to create your own clients is a nice thing to have, I must warn you that I will **not** maintain any clients other than Liquid, Supernova and Citrus. Security of the third-party clients falls down to you, other programmers and more importantly the original developer of the client.
+Clients are made using the [Electron framework](https://electronjs.org) and need to include the transreceiv folder in the root of your Electron project. Although the ability to create your own clients is a nice thing to have, I must warn you that I will **not** maintain any clients other than Supernova. Security of the third-party clients falls down to you, other programmers and more importantly the original developer of the client.
 
 ### License
 transreceiv is licensed under the MIT License, which can be found [here](https://opensource.org/licenses/mit) or at the LICENSE file.
